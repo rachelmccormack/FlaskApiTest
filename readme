@@ -1,0 +1,28 @@
+Written in python 3
+
+Check if flask is installed using the command
+pip freeze
+
+If you can't see flask on that list, install using
+pip install Flask
+
+from the directory with apiTest.py run
+env FLASK_APP=apiTest.py flask run
+
+This will let you know where the app is running, ie http://127.0.0.1:5000/
+
+To see a list of authors or categories, add /authors or /catgories on the end of this url
+
+To see a specific Author or category, add /author/*authorsname* or /category/*categoryname* to the end of this url
+
+example : http://127.0.0.1:5000/author/Robin%20Nixon
+
+To filter this authors books by category (or categories books by author) add this on to the end of the url
+
+examples : http://127.0.0.1:5000/author/Robin%20Nixon/linux
+http://127.0.0.1:5000/categories/linux/robin%20nixon
+
+You can use the terms categories and category interchangeably, as well as authors and author. Capitalisation is filtered out.
+
+To add a new book, navigate to http://127.0.0.1:5000/add/
+This will load a form allowing you to add a new book. The ISBN may not contain any letters.
